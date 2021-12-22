@@ -1,0 +1,49 @@
+.heading {
+  @apply font-semibold mb-4 mt-6;
+}
+
+.mdx {
+  @apply font-normal text-lg container mx-auto w-auto max-w-2xl;
+
+  a {
+    @apply text-blue-600;
+    &:visited {
+      @apply text-purple-700;
+    }
+  }
+
+  p {
+    @apply mt-10 -mb-3 font-serif;
+  }
+
+  pre {
+    @apply text-base font-mono bg-gray-100 rounded-md p-4 mb-4 mt-10;
+  }
+
+  img {
+    @apply mx-auto;
+  }
+
+  h1 {
+    @apply mt-10 -mb-4;
+    @apply font-sans text-4xl font-bold;
+  }
+  h2 {
+    @apply mt-10 -mb-7;
+    @apply font-sans text-2xl font-medium;
+  }
+  h3 {
+    @apply mt-10 -mb-7;
+    @apply font-sans text-xl font-medium;
+  }
+  h4 {
+    @apply font-sans text-lg;
+  }
+  h5 {
+    @apply font-sans;
+  }
+  h6 {
+    @apply font-sans text-sm;
+  }
+  
+}

@@ -1,19 +1,24 @@
 import React, { useState } from 'react';
+import { getHeapStatistics } from 'v8';
 import { Fullscreen } from '../components/fullscreen';
+import Resumed from '@/markdown/resume.mdx';
+import s from '@/styles/mdx.module.scss';
 
-export default function Resume(){
+
+export async function getStaticProps(context) {
+  return {
+    props: {
+      result: null
+    },
+  }
+}
+
+export default function Resume(props) {
   return <>
-    <div className='h-96'>
-      <Fullscreen>
-        <div className='absolute top-20'>
-          asdfasdfasdfasdf<div>asdf</div>
-          asdfasdfasdfasdf<div>asdf</div>
-          asdfasdfasdfasdf<div>asdf</div>
-          asdfasdfasdfasdf<div>asdf</div>
-          asdfasdfasdfasdf<div>asdf</div>
-        </div>
-        <div className='absolute right-20'>this is another set of text</div>
-      </Fullscreen>
+    <div className="mx-10 my-20">
+      <div className={s.mdx}>
+        <Resumed/>
+      </div>
     </div>
   </>
 }
