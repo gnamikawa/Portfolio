@@ -1,10 +1,6 @@
-import React, { useState } from 'react';
-import { getHeapStatistics } from 'v8';
-import { Fullscreen } from '../components/fullscreen';
+import React from 'react';
 import Resumed from '@/markdown/resume.mdx';
 import s from '@/styles/mdx.module.scss';
-import {run} from '@mdx-js/mdx'
-import * as runtime from 'react/jsx-runtime.js'
 
 export async function getStaticProps(context) {
   return {
