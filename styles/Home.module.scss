@@ -1,0 +1,55 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.english {
+  margin: 0;
+  line-height: 1.15;
+  font-size: clamp(2rem, 10vw, 4rem);
+  text-shadow: 2px 2px #eee;
+  font-weight: 300;
+}
+
+.japanese {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 10rem;
+  font-family: 'Yuji Syuku', serif;
+  writing-mode: vertical-rl;
+  position: absolute;
+  z-index: -1;
+  color: #eee;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.english,
+.japanese,
+.description {
+  text-align: center;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  color: #666;
+  text-shadow: 2px 2px #fff;
+}
