@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import * as d3 from "d3";
 import {isEmpty, isNull, maxBy, minBy} from 'lodash';
 import { useGeolocation } from '../../functions/useGeolocation';
-import { useWeekForecast } from './useWeekForecast';
+import { useWeekForecast } from '../../functions/useWeekForecast';
 // import styles from '../styles/Home.module.scss'
 
 export interface Errorable {
