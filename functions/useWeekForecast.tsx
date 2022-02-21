@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useGeolocation } from '../../functions/useGeolocation';
+import { useGeolocation } from './useGeolocation';
 
 export function useWeekForecast(cnt) {
     const { success: geolocationSuccess, error: geolocationError } = useGeolocation();
