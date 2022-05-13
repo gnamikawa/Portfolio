@@ -1,7 +1,7 @@
 module.exports = {
   plugins: [
     'postcss-clamp',
-    'tailwindcss',
+    // 'tailwindcss',
     'autoprefixer'
   ],
 }

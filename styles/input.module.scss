@@ -1,0 +1,13 @@
+@use 'color.scss';
+.root {
+    display: inline-flex;
+    padding: 4px 8px 4px 8px;
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid black;
+    input {
+        background-color: white;
+        border: none;
+        outline: none;
+    }
+}
