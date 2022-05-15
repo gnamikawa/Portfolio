@@ -1,43 +1,35 @@
-// // next.config.js
-// const withMDX = require('@next/mdx')({
-//   extension: /\.mdx?$/,
-//   options: {
-//     remarkPlugins: [],
-//     rehypePlugins: [],
-//   },
-// })
-
-// module.exports = {
-//   reactStrictMode: true,
-//   ...withMDX( {
-//     pageExtensions: ['md', 'mdx', 'js', 'jsx', 'tsx'],
-//   } )
-// }
-
 const path = require('path')
-module.exports = {
-  // Prefer loading of ES Modules over CommonJS
-  experimental: {esmExternals: true},
-  // Support MDX files as pages:
-  pageExtensions: ['md', 'mdx', 'tsx', 'ts', 'jsx', 'js'],
-  // Support loading `.md`, `.mdx`:
-  webpack(config, options) {
-    config.module.rules.push({
-      test: /\.mdx?$/,
-      use: [
-        // The default `babel-loader` used by Next:
-        options.defaultLoaders.babel,
-        {
-          loader: '@mdx-js/loader',
-          /** @type {import('@mdx-js/loader').Options} */
-          options: {/* jsxImportSource: …, otherOptions… */}
-        }
-      ]
-    })
+const { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } = require('next/constants')
 
-    return config
-  },
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  }
+module.exports = async (phase, { defaultConfig }) => {
+    const nextConfig = {};
+    // @ts-check
+    /**
+     * @type {import('next').NextConfig}
+     **/
+    nextConfig[PHASE_DEVELOPMENT_SERVER] = {
+        experimental: {esmExternals: true},
+        pageExtensions: ['md', 'mdx', 'tsx', 'ts', 'jsx', 'js'],
+        sassOptions: {
+            includePaths: [path.join(__dirname, 'styles')],
+        },
+        webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+            config.module.rules.push({
+                test: /\.(md|mdx)$/,
+                use: [
+                    defaultLoaders.babel,
+                    '@mdx-js/loader',
+                ]
+            });
+            config.module.rules.push({
+                test: /\.(ts|tsx)$/,
+                use: [
+                    defaultLoaders.babel,
+                    'ts-loader'
+                ]
+            });
+            return config;
+        },
+    }
+    return nextConfig[phase];
 }
