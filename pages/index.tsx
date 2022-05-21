@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
+// import useStyles from 'isomorphic-style-loader/useStyles'
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
+  // useStyles(styles); 
   return (
     <div className={styles.container}>
       <Head>
