@@ -21,17 +21,6 @@ module.exports = async (phase, { defaultConfig }) => {
                     '@mdx-js/loader',
                 ]
             });
-            config.module.rules.push({
-                test: /\.(ts|tsx)$/,
-                use: [
-                    defaultLoaders.babel,
-                    'ts-loader'
-                ]
-            });
-            config.module.rules.push({
-                test: /\.(js|jsx)$/,
-                use: [ defaultLoaders.babel ]
-            });
             return config;
         },
     };
