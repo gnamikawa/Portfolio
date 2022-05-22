@@ -22,8 +22,6 @@ export function components(props) {
     useEffect( () => { ( async () => {
         const modules = Object.fromEntries( await Promise.all(props.filepaths.map( async filepath => {
             const awaitable = await import(`components/${filepath}`).then( module => module.default ).catch( () => undefined );
-            console.log(filepath);
-            console.log(componentQuery);
             return [filepath, awaitable];
         } ) ) );
         setComponents(modules);
