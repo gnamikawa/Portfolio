@@ -1,4 +1,8 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+
+// pages/_document.js
+
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import React from 'react';
 
 const MyDocument = () => {
   return (
