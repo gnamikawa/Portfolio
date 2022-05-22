@@ -15,7 +15,7 @@ export async function getServerSideProps(context) {
     }
 }
 
-export function components(props) {
+export default function Components(props) {
     const router = useRouter();
     const componentQuery = `${[router.query.component].flat(1).slice(1).join('/')}.tsx`;
     const [components, setComponents] = useState({});
@@ -30,5 +30,3 @@ export function components(props) {
 
     return <Component/>;
 }
-
-export default components; 
