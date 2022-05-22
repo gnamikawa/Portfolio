@@ -17,7 +17,7 @@ export async function getServerSideProps(context) {
 
 export function components(props) {
     const router = useRouter();
-    const componentQuery = `${[router.query.component].flat(1).slice(1).join('/')}`;
+    const componentQuery = `${[router.query.component].flat(1).slice(1).join('/')}.tsx`;
     const [components, setComponents] = useState({});
     useEffect( () => { ( async () => {
         const modules = Object.fromEntries( await Promise.all(props.filepaths.map( async filepath => {
