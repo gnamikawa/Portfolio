@@ -20,9 +20,6 @@ const nextConfig = (phase) => {
 
     case PHASE_DEVELOPMENT_SERVER: {
       config = {
-        lessLoaderOptions: {
-          javascriptEnabled: true,
-        },
         experimental: { esmExternals: true },
         pageExtensions: ["md", "mdx", "tsx", "ts", "jsx", "js"],
         sassOptions: {
