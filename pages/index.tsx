@@ -17,7 +17,7 @@ export default function Home() {
         <h1 className={styles.japanese}>並川玄蔵</h1>
         <h1 className={styles.english}>Genzo Namikawa</h1>
 
-        <p className={"text-red-500"}>
+        <p className={styles.description}>
           A Software Developer in the Tokyo Metropolitan Area
         </p>
       </main>
