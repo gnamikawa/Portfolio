@@ -1,5 +1,3 @@
-import Input from "@/components/input";
-
-export default function Login(){
-    return <Input/>;
+export default function Login() {
+  return <div />;
 }

@@ -1,6 +1,3 @@
 module.exports = {
-  plugins: [
-    'postcss-clamp',
-    'autoprefixer'
-  ],
-}
+  plugins: ["tailwindcss", "postcss-clamp", "autoprefixer"],
+};
