@@ -33,7 +33,6 @@ export default function Index() {
         <h1
           style={{
             opacity: isLoaded ? 1 : 0,
-            translate: isLoaded ? "0" : "50",
           }}
           className={styles.english}
         >
