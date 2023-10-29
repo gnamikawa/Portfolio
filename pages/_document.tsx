@@ -16,7 +16,11 @@ const MyDocument = () => {
         <link
           href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"
           rel="preload"
-        ></link>
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <body>
         <Main />

@@ -1,4 +1,4 @@
-.container {
+.index {
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
@@ -18,7 +18,7 @@
 }
 
 .english {
-  margin: 0;
+  @apply text-lime-800 transition ease-in;
   line-height: 1.15;
   font-size: clamp(2rem, 10vw, 4rem);
   text-shadow: 2px 2px #eee;
@@ -26,17 +26,17 @@
 }
 
 .japanese {
+  @apply text-gray-100 transition ease-linear duration-[400ms] delay-[3000ms];
   margin: 0;
   line-height: 1.15;
   font-size: 10rem;
-  font-family: 'Yuji Syuku', serif;
+  font-family: "Yuji Syuku", serif;
   writing-mode: vertical-rl;
   position: absolute;
   z-index: -1;
-  color: #eee;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
 }
 
 .english,
@@ -48,8 +48,7 @@
 }
 
 .description {
+  @apply text-gray-500 transition ease-in delay-1000 shadow-gray-100;
   line-height: 1.5;
   font-size: clamp(1rem, 4vw, 1.5rem);
-  color: #666;
-  text-shadow: 2px 2px #fff;
 }
