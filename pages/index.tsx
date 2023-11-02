@@ -14,7 +14,6 @@ const useLoaded = () => {
 
 export default function Index() {
   const isLoaded = useLoaded();
-  console.log(isLoaded);
   return (
     <div className={styles.index}>
       <Head>

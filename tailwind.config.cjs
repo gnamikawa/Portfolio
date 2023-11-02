@@ -9,7 +9,16 @@ const config = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "cherry-bomb-one": ["Cherry Bomb One"],
+        "hakushu-higerei": ["Hakushu Higerei"],
+        "tetsubun-gothic": ["Tetsubun Gothic"],
+      },
+      colors: {
+        primary: "#ab3232",
+      },
+    },
   },
   plugins: [],
 };

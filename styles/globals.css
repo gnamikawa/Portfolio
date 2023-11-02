@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Cherry Bomb One";
+  src: url("../public/CherryBombOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Hakushu Higerei";
+  src: url("../public/hkhigerei.ttf");
+}
+
+@font-face {
+  font-family: "Tetsubun Gothic";
+  src: url("../public/tetsubun-gothic.otf");
+}
+
 html,
 body {
   padding: 0;

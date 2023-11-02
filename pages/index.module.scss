@@ -26,11 +26,10 @@
 }
 
 .japanese {
-  @apply text-gray-100 transition ease-linear duration-[400ms] delay-[3000ms];
+  @apply text-gray-100 transition ease-linear duration-[400ms] delay-[3000ms] font-tetsubun-gothic;
   margin: 0;
   line-height: 1.15;
   font-size: 10rem;
-  font-family: "Yuji Syuku", serif;
   writing-mode: vertical-rl;
   position: absolute;
   z-index: -1;
