@@ -1,28 +1,22 @@
-import classNames from "classnames";
 import React from "react";
-import styles from "./Button.module.scss";
 
-interface ButtonProps {
-  variant?: "primary" | "secondary" | "tertiary";
-  backgroundColor?: string;
-  size?: "small" | "medium" | "large";
+interface CommonButtonProps {
   label: string;
   onClick?: () => void;
 }
 
-export const Button = ({
-  variant = "primary",
-  size = "medium",
-  label,
-  ...props
-}: ButtonProps) => {
+interface PrimaryButtonProps extends CommonButtonProps {
+  variant: "primary";
+}
+const PrimaryButton = (props: PrimaryButtonProps) => {
   return (
-    <button
-      type="button"
-      className={classNames(styles.button, variant)}
-      {...props}
-    >
-      {label}
+    <button type="button" className="text-primary" {...props}>
+      {props.label}
     </button>
   );
+};
+
+type ButtonProps = PrimaryButtonProps;
+export const Button = (props: ButtonProps) => {
+  return <PrimaryButton {...props} />;
 };
