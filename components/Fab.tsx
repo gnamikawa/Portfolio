@@ -4,8 +4,8 @@ import React from "react";
 
 interface FabProps {
   icon: LucideIcon;
-  iconColor: string;
-  backgroundColor: string;
+  iconColor?: string;
+  backgroundColor?: string;
   onClick?: () => void;
 }
 
@@ -20,11 +20,13 @@ export const Fab = (props: FabProps) => {
     <button
       type="button"
       onClick={props.onClick}
-      className="rounded-full bg-white transition-all shadow-md hover:shadow-lg active:shadow-md p-2 hover:-translate-y-1 active:translate-y-0 duration-100"
+      style={{
+        backgroundColor: internalBackgroundColor,
+      }}
+      className="rounded-full transition-all shadow-md hover:shadow-lg active:shadow-md p-2 hover:-translate-y-1 active:translate-y-0 duration-100"
     >
       <InternalIcon
         style={{
-          backgroundColor: internalBackgroundColor,
           stroke: internalIconColor,
         }}
         className="w-8 h-8"
