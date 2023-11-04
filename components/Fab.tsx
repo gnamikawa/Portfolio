@@ -17,13 +17,17 @@ export const Fab = (props: FabProps) => {
     props.backgroundColor ?? tailwindConfig.theme.colors.white;
 
   return (
-    <button type="button" onClick={props.onClick}>
+    <button
+      type="button"
+      onClick={props.onClick}
+      className="rounded-full bg-white transition-all shadow-md hover:shadow-lg active:shadow-md p-2 hover:-translate-y-1 active:translate-y-0 duration-100"
+    >
       <InternalIcon
         style={{
           backgroundColor: internalBackgroundColor,
           stroke: internalIconColor,
         }}
-        className="rounded-full w-14 h-14 bg-white transition-all shadow-md p-2 hover:-translate-y-1 active:translate-y-0"
+        className="w-8 h-8"
       />
     </button>
   );
